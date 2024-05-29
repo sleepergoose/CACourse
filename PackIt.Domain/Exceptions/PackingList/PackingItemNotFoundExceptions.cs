@@ -2,7 +2,7 @@
 
 namespace PackIt.Domain.Exceptions.PackingList;
 
-internal class PackingItemNotFoundExceptions : CACourseException
+public sealed class PackingItemNotFoundExceptions : CACourseException
 {
     public string ItemName { get; }
 
