@@ -2,7 +2,7 @@
 
 namespace PackIt.Domain.Policies.Temperature;
 
-internal class LowTemperaturePolicy : IPackingItemsPolicy
+internal sealed class LowTemperaturePolicy : IPackingItemsPolicy
 {
     public IEnumerable<PackingListItem> GenerateItems(PolicyData data)
         => new List<PackingListItem>()

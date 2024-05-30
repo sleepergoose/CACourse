@@ -2,7 +2,7 @@
 
 namespace PackIt.Domain.Policies.Universal;
 
-internal class BasePolicy : IPackingItemsPolicy
+internal sealed class BasePolicy : IPackingItemsPolicy
 {
     private const uint MaximumQuantityOfClothes = 7;
 

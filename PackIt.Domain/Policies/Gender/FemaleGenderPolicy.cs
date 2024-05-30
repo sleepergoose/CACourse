@@ -2,7 +2,7 @@
 
 namespace PackIt.Domain.Policies.Gender;
 
-internal class FemaleGenderPolicy : IPackingItemsPolicy
+internal sealed class FemaleGenderPolicy : IPackingItemsPolicy
 {
     public bool IsApplicable(PolicyData data) 
         => data.Gender == Constants.Gender.Female;
