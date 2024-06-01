@@ -1,4 +1,6 @@
 
+using PackIt.Application;
+
 namespace PackIt.Api;
 
 public class Program
@@ -9,6 +11,7 @@ public class Program
 
         // Add services to the container.
 
+        builder.Services.AddAplication();
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
