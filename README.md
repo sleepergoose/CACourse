@@ -1,5 +1,8 @@
 # CACourse
 
+> **Outside layers can reference inside layers but inside layers cannot reference outside layers.**
+
+
 ## Domain 
 The Core of the project. Defines entities, business rules, aggregates, Value objects, domain events. <br/>
 Then we can define Repositories interfaces, Factory Interf, Domain Services and Custom Exceptions.<br/>
@@ -10,7 +13,7 @@ Outter layers may reference the Domain layer, but not vice versa.<br/>
 ## Application 
 Orchestrate the domain layer and tells how to perform the business logic, use cases. <br/>
 Typically this layer is implemented as a set of application services. <br/>
-If we are using CQRS patter that in the Application layer we will see sets of Commands and Quesries. <br/>
+If we are using CQRS patter that in the Application layer we will see sets of Commands and Queries. <br/>
 Should not reference any other layers except the Domain layer.
 
 
