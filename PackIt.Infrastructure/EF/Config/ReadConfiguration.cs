@@ -9,7 +9,7 @@ internal class ReadConfiguration
 {
     public void Configure(EntityTypeBuilder<PackingListReadModel> builder)
     {
-        builder.ToTable("PackingLists");
+        builder.ToTable(Constants.PackingListTableName);
         builder.HasKey(x => x.Id);
 
         builder
@@ -26,6 +26,6 @@ internal class ReadConfiguration
 
     public void Configure(EntityTypeBuilder<PackingListItemReadModel> builder)
     {
-        builder.ToTable("PackingItems");
+        builder.ToTable(Constants.PackingItemsTableName);
     }
 }

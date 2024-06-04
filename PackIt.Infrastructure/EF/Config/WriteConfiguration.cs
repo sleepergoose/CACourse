@@ -39,11 +39,15 @@ internal sealed class WriteConfiguration
 
         builder.HasMany(typeof(PackingListItem), "_items");
 
-        builder.ToTable("PackingLista");
+        builder.ToTable(Constants.PackingListTableName);
     }
 
     public void Configure(EntityTypeBuilder<PackingListItem> builder)
     {
-        
+        builder.Property<Guid>("Id");
+        builder.Property(pi => pi.Name);
+        builder.Property(pi => pi.Quantity);
+        builder.Property(pi => pi.IsPacked);
+        builder.ToTable(Constants.PackingItemsTableName);
     }
 }
