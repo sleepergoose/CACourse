@@ -4,7 +4,7 @@ namespace PackIt.Domain.ValueObjects.PackingList;
 
 public sealed record PackingListName
 {
-    public string Name { get; } = string.Empty;
+    public string Value { get; } = string.Empty;
 
     public PackingListName(string value)
     {
@@ -13,10 +13,10 @@ public sealed record PackingListName
             throw new EmptyPackingListNameException();
         }
 
-        Name = value;
+        Value = value;
     }
 
-    public static implicit operator string(PackingListName name) => name.Name;
+    public static implicit operator string(PackingListName name) => name.Value;
 
     public static implicit operator PackingListName(string name) => new PackingListName(name);
 }
