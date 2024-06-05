@@ -3,6 +3,7 @@ using PackIt.Shared.Abstractions.Commands;
 using PackIt.Shared.Abstractions.Queries;
 using PackIt.Shared.Commands;
 using PackIt.Shared.Queries;
+using PackIt.Shared.Services;
 using System.Reflection;
 
 namespace PackIt.Shared.Extensions;
@@ -32,6 +33,12 @@ public static class Extensions
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
+        return services;
+    }
+
+    public static IServiceCollection AddShared(this IServiceCollection services)
+    {
+        services.AddHostedService<AppInitializer>();
         return services;
     }
 }

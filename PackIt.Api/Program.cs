@@ -1,6 +1,6 @@
-
 using PackIt.Application;
 using PackIt.Infrastructure;
+using PackIt.Shared.Extensions;
 
 namespace PackIt.Api;
 
@@ -10,6 +10,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.AddShared();
         builder.Services.AddAplication();
         builder.Services.AddInfrastructure(builder.Configuration);
         builder.Services.AddControllers();
