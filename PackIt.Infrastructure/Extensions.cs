@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PackIt.Application.Services;
 using PackIt.Infrastructure.EF;
+using PackIt.Infrastructure.Services;
 using PackIt.Shared.Extensions;
 
 namespace PackIt.Infrastructure;
@@ -11,6 +13,8 @@ public static class Extensions
     {
         services.AddPostrges(configuration);
         services.AddQueries();
+
+        services.AddSingleton<IWeatherService, DumbWeatherService>();
 
         return services;
     }
