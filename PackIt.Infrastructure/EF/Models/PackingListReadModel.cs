@@ -1,9 +1,10 @@
 ﻿namespace PackIt.Infrastructure.EF.Models;
 
-internal sealed record class PackingListReadModel(
-    Guid Id,
-    int Version,
-    string Name,
-    LocalizationReadModel Localization,
-    ICollection<PackingListItemReadModel> Items
-);
+internal sealed class PackingListReadModel
+{
+    public Guid Id { get; set; }
+    public int Version { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public LocalizationReadModel Localization { get; set; } = default!;
+    public ICollection<PackingListItemReadModel> Items { get; set; } = default!;
+};

@@ -11,10 +11,10 @@ internal sealed class PostgresPackingListRepository : IPackingListRepository
     private readonly DbSet<PackingList> _packinfLists;
     private readonly WriteDbContext _writeDbContext;
 
-    public PostgresPackingListRepository(DbSet<PackingList> packinfLists, WriteDbContext writeDbContext)
+    public PostgresPackingListRepository(WriteDbContext writeDbContext)
     {
-        _packinfLists = packinfLists;
         _writeDbContext = writeDbContext;
+        _packinfLists = _writeDbContext.PackingLists;
     }
 
     public async Task AddAsync(PackingList packingList)

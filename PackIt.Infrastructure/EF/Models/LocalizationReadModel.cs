@@ -1,6 +1,6 @@
 ﻿namespace PackIt.Infrastructure.EF.Models;
 
-internal sealed record class LocalizationReadModel
+internal sealed class LocalizationReadModel
 {
     public string City { get; set; } = string.Empty;
     public string Country { get; set; } = string.Empty;
