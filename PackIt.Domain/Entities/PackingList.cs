@@ -21,6 +21,14 @@ public sealed class PackingList : AggregateRoot<PackingListId>
         _localization = localization;
     }
 
+    #pragma warning disable CS8618 
+    private PackingList()
+    #pragma warning restore CS8618 
+    {
+        // this parameterless constructor is needed since EF Core requires it in an entities 
+        // that are used in interoperation with database
+    }
+
     public void AddItem(PackingListItem item)
     {
         var existingItem = _items.Any(i => i.Name == item.Name);

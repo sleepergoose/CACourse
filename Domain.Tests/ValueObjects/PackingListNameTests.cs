@@ -13,7 +13,7 @@ public class PackingListNameTests
         var valueObject = new PackingListName(name);
 
         Assert.NotNull(valueObject);
-        Assert.True(valueObject.Name == name);
+        Assert.True(valueObject.Value == name);
     }
 
     [Fact]
@@ -39,7 +39,7 @@ public class PackingListNameTests
         var valueObject = new PackingListName("tempName");
         valueObject = name;
 
-        Assert.True(valueObject.Name == name);
+        Assert.True(valueObject.Value == name);
         Assert.True(valueObject == name);
     }
 
