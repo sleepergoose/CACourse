@@ -2,7 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using PackIt.Application.Services;
 using PackIt.Infrastructure.EF;
+using PackIt.Infrastructure.Logging;
 using PackIt.Infrastructure.Services;
+using PackIt.Shared.Abstractions.Commands;
 using PackIt.Shared.Extensions;
 
 namespace PackIt.Infrastructure;
@@ -15,6 +17,8 @@ public static class Extensions
         services.AddQueries();
 
         services.AddSingleton<IWeatherService, DumbWeatherService>();
+
+        services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
 
         return services;
     }
