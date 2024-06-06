@@ -22,6 +22,16 @@ public class ExceptionMiddleware : IMiddleware
 
 			await context.Response.WriteAsync(json);
 		}
+		catch (Exception ex)
+		{
+            context.Response.StatusCode = 500;
+            context.Response.Headers.Add("content-type", "application/json");
+
+            var errorCode = ToUnderscoreCase(ex.GetType().Name.Replace("Exception", string.Empty));
+            var json = JsonSerializer.Serialize(new { ErrorCode = errorCode, Message = "An error occurred" });
+
+            await context.Response.WriteAsync(json);
+        }
     }
 
     private static string ToUnderscoreCase(string value)
