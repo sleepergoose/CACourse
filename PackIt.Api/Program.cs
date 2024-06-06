@@ -21,6 +21,8 @@ public class Program
 
         var app = builder.Build();
 
+
+        // Middlewares
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
@@ -28,9 +30,9 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+        app.UseShared();
 
         app.UseAuthorization();
-
 
         app.MapControllers();
 

@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using PackIt.Shared.Abstractions.Commands;
 using PackIt.Shared.Abstractions.Queries;
 using PackIt.Shared.Commands;
+using PackIt.Shared.Exceptions;
 using PackIt.Shared.Queries;
 using PackIt.Shared.Services;
 using System.Reflection;
@@ -39,6 +41,14 @@ public static class Extensions
     public static IServiceCollection AddShared(this IServiceCollection services)
     {
         services.AddHostedService<AppInitializer>();
+        services.AddScoped<ExceptionMiddleware>();
+
         return services;
+    }
+
+    public static IApplicationBuilder UseShared(this IApplicationBuilder app)
+    {
+        app.UseMiddleware<ExceptionMiddleware>();
+        return app;
     }
 }
