@@ -2,6 +2,7 @@
 using PackIt.Domain.Exceptions.PackingList;
 using PackIt.Domain.ValueObjects.PackingList;
 using PackIt.Shared.Abstractions.Domain;
+using System.Runtime.CompilerServices;
 
 namespace PackIt.Domain.Entities;
 
@@ -27,6 +28,12 @@ public sealed class PackingList : AggregateRoot<PackingListId>
     {
         // this parameterless constructor is needed since EF Core requires it in an entities 
         // that are used in interoperation with database
+    }
+
+    private PackingList(PackingListId id, PackingListName name, Localization localization, LinkedList<PackingListItem> items)
+    : this(id, name, localization)
+    {
+        _items = items;
     }
 
     public void AddItem(PackingListItem item)

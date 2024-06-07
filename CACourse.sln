@@ -7,21 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF463D88-8FE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A9C27F89-00E5-415E-8910-B81EB0273B11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Shared", "PackIt.Shared\PackIt.Shared.csproj", "{2C91432C-63E5-4F6A-9FF1-CE079E828EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Shared", "PackIt.Shared\PackIt.Shared.csproj", "{2C91432C-63E5-4F6A-9FF1-CE079E828EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Shared.Abstractions", "PackIt.Shared.Abstractions\PackIt.Shared.Abstractions.csproj", "{159D67BE-C9EC-4A02-B449-3D2342E1993B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Shared.Abstractions", "PackIt.Shared.Abstractions\PackIt.Shared.Abstractions.csproj", "{159D67BE-C9EC-4A02-B449-3D2342E1993B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1DA0C66A-48AD-441A-9566-D5A4C70D116A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Domain", "PackIt.Domain\PackIt.Domain.csproj", "{00A75299-2B67-4A63-8B71-0E6D3DD67D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Domain", "PackIt.Domain\PackIt.Domain.csproj", "{00A75299-2B67-4A63-8B71-0E6D3DD67D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Application", "PackIt.Application\PackIt.Application.csproj", "{2C3E13C3-A8D7-4FF5-9812-D48548D1BC06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Application", "PackIt.Application\PackIt.Application.csproj", "{2C3E13C3-A8D7-4FF5-9812-D48548D1BC06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Infrastructure", "PackIt.Infrastructure\PackIt.Infrastructure.csproj", "{608F4522-C272-4358-A2BF-986639AAE969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Infrastructure", "PackIt.Infrastructure\PackIt.Infrastructure.csproj", "{608F4522-C272-4358-A2BF-986639AAE969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIt.Api", "PackIt.Api\PackIt.Api.csproj", "{802EA319-69F1-474B-9CFA-D2D31142CA89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIt.Api", "PackIt.Api\PackIt.Api.csproj", "{802EA319-69F1-474B-9CFA-D2D31142CA89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{001128F4-E306-40EE-9BA6-BFA884A6BF62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{001128F4-E306-40EE-9BA6-BFA884A6BF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Tests", "Application.Tests\Application.Tests.csproj", "{8013F6D0-59EA-463B-9F61-A21875DBF355}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{001128F4-E306-40EE-9BA6-BFA884A6BF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{001128F4-E306-40EE-9BA6-BFA884A6BF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{001128F4-E306-40EE-9BA6-BFA884A6BF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8013F6D0-59EA-463B-9F61-A21875DBF355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8013F6D0-59EA-463B-9F61-A21875DBF355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8013F6D0-59EA-463B-9F61-A21875DBF355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8013F6D0-59EA-463B-9F61-A21875DBF355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{608F4522-C272-4358-A2BF-986639AAE969} = {FF463D88-8FE1-4FB1-BBCF-4FFAE9A3EE68}
 		{802EA319-69F1-474B-9CFA-D2D31142CA89} = {FF463D88-8FE1-4FB1-BBCF-4FFAE9A3EE68}
 		{001128F4-E306-40EE-9BA6-BFA884A6BF62} = {1DA0C66A-48AD-441A-9566-D5A4C70D116A}
+		{8013F6D0-59EA-463B-9F61-A21875DBF355} = {1DA0C66A-48AD-441A-9566-D5A4C70D116A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF08F415-4343-4610-927E-5A60A4CF4DCE}
