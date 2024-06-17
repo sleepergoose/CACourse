@@ -3,5 +3,5 @@
 internal static class Constants
 {
     public const string PackingItemsTableName = "PackingItems";
-    public const string PackingListTableName = "PackingListsTableName";
+    public const string PackingListTableName = "PackingLists";
 }

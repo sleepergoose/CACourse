@@ -1,5 +1,11 @@
 # CACourse
 
+Course video: [Mini Course #1 Clean Architecture + CQRS](https://github.com/devmentors/PackIT/blob/master/src/PackIT.Domain/Entities/PackingList.cs)
+
+Source code of the course on GitHub: [PackIT](https://github.com/devmentors/PackIT/blob/master/src/PackIT.Domain/Entities/PackingList.cs)
+
+## Important Notes
+
 > **Outside layers can reference inside layers but inside layers cannot reference outside layers.**
 
 
